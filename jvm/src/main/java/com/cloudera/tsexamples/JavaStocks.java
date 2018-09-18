@@ -55,7 +55,7 @@ public class JavaStocks {
     JavaSparkContext context = new JavaSparkContext(conf);
     SQLContext sqlContext = new SQLContext(context);
 
-    DataFrame tickerObs = loadObservations(context, sqlContext, "/user/ankit.jaiswal/ticker.tsv");
+    DataFrame tickerObs = loadObservations(context, sqlContext, args[0]);
 
     // Create an daily DateTimeIndex over August and September 2015
     ZoneId zone = ZoneId.systemDefault();
